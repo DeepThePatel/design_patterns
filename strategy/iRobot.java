@@ -4,7 +4,7 @@ public class iRobot extends Robot{
         movebehavior = new CrawlBehavior();
         movebehavior = new WalkBehavior();
         movebehavior = new RunBehavior();
-
+        character.add('i');
     }
 
     public String toString() {

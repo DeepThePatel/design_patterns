@@ -5,7 +5,7 @@ public class DogRobot extends Robot{
         movebehavior = new CrawlBehavior();
         movebehavior = new WalkBehavior();
         movebehavior = new RunBehavior();
-
+        character.add('+','+','o');
     }
 
     public String toString() {

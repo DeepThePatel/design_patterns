@@ -24,9 +24,9 @@ public abstract class MoveBehavior {
      */
     public void move(ArrayList<String> character, int speed) {
         // TBD
-        CrawlBehavior(1);
-        WalkBehavior(2);
-        RunBehavior(3);
+        CrawlBehavior.move(character,1);
+        WalkBehavior.move(character,2);
+        RunBehavior.move(character,3);
     }
 
     /**

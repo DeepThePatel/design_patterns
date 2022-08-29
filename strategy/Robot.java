@@ -2,8 +2,8 @@ import java.util.ArrayList;
 
 public class Robot {
     protected String name;
-    MoveBehavior movebehavior;
-    ArrayList<String> character;
+    protected MoveBehavior movebehavior;
+    protected ArrayList<String> character = new ArrayList<String>();
 
     public Robot(String name) {
         this.name = name;
