@@ -9,6 +9,6 @@ public class DogRobot extends Robot{
     }
 
     public String toString() {
-        character.add(name + "is a robot");
+        System.out.println(name + "is a robot");
     }
 }

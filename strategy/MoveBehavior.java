@@ -1,4 +1,4 @@
-package strategy;
+//package strategy;
 
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
@@ -23,10 +23,14 @@ public abstract class MoveBehavior {
      *                  is fast
      */
     public void move(ArrayList<String> character, int speed) {
-        // TBD
-        CrawlBehavior.move(DogRobot,1);
-        WalkBehavior.move(iRobot,2);
-        RunBehavior.move(HumanRobot,3);
+    clear();
+for(int i=0; i<NUM_MOVES; i++) {
+    displayCharacter(character);
+    sleep((int) (DEFAULT_SPEED/Math.pow(speed,2)));
+    clear();
+    pushCharacterForward(character);
+    }
+    clear();
     }
 
     /**
