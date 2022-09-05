@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.Random;
 
+import javax.swing.plaf.basic.BasicInternalFrameTitlePane.SystemMenuBar;
+
 /**
  * Creating a new instance of a baby
  */
@@ -10,19 +12,27 @@ public class Baby {
     Random rand = new Random();
 
     public Baby(String name) {
-        this.name = name;
+        this.name = "Deep";
     }
 
     public String getName() {
         return name;
     }
-
+/**
+ * Creating the receiveLove method where either of two strings are randomly selected
+ */
     public void receiveLove() {
-
+        String [] rl = {name + " feels appreciated and loved.", name + " pushes everyone away and continues to cry."};
+        int select = rand.nextInt(rl.length);
+        System.out.println(rl[select]);
     }
-
+/**
+ * Creating the eat method where either of two strings are randomly selected
+ */
     public void eat() {
-
+        String [] eat = {name + " has a happy full tummy.", name + " throws all his food on the floor."};
+        int select = rand.nextInt(eat.length);
+        System.out.println(eat[select]);
     }
 
     public void getChanged() {
