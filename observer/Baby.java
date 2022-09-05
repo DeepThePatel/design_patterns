@@ -6,7 +6,7 @@ import java.util.Random;
  */
 public class Baby {
     protected String name;
-    public ArrayList observers = new ArrayList<>();
+    public ArrayList<Observer> observers = new ArrayList<>();
     Random rand = new Random();
 
     public Baby(String name) {
@@ -38,7 +38,7 @@ public class Baby {
     }
 
     public void registerObserver(Observer observer) {
-        observers.get(0);
+        observers.add(observer);
     }
 
     public void removeObserver(Observer observer) {
@@ -46,7 +46,9 @@ public class Baby {
     }
 
     public void notifyObservers(Cry cry) {
-        observers.notify();
+        for(Observer observer : observers) {
+            observer.update(cry);
+        }
     }
 /**
  * Methods that display the baby's current emotion and uses the notify observer method to act accordingly based on type of emotion

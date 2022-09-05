@@ -6,6 +6,7 @@ public class Dad {
     Dad(Subject baby) {
         
     }
+    
 /**
  * Receives type of cry and returns message based on type of cry, type of cry insignificant for dad
  * @param cry Determines what message to display depending on cry type, but in dad's case it does not matter
