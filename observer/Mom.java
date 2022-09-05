@@ -1,8 +1,8 @@
 public class Mom{
-    protected Subject baby;
+    protected static Subject baby;
 
     Mom(Subject baby) {
-        
+
     }
 
     /**
@@ -12,17 +12,17 @@ public class Mom{
     public static void update(Cry cry) {
         if(cry == Cry.ANGRY)
         {
-            System.out.println("Mom hugs " + name);
+            System.out.println("Mom hugs " + ((Baby)baby).getName());;
             ((Baby)baby).receiveLove();
         }
         else if(cry == Cry.HUNGRY)
         {
-            System.out.println("Mom feeds " + name);
+            System.out.println("Mom feeds " + ((Baby)baby).getName());;
             ((Baby)baby).eat();
         }
         else if(cry == Cry.WET)
         {
-            System.out.println("Mom changes " + name);
+            System.out.println("Mom changes " + ((Baby)baby).getName());
             ((Baby)baby).getChanged();
         }
     }

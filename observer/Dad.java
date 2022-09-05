@@ -1,10 +1,10 @@
 import java.util.Random;
 
 public class Dad {
-    protected Subject baby;
+    private Subject baby;
 
     Dad(Subject baby) {
-        
+        baby = new Baby("Deep");
     }
 /**
  * Receives type of cry and returns message based on type of cry, type of cry insignificant for dad

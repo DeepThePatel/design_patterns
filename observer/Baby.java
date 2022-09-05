@@ -8,11 +8,11 @@ import javax.swing.plaf.basic.BasicInternalFrameTitlePane.SystemMenuBar;
  */
 public class Baby {
     protected String name;
-    protected ArrayList observers = new ArrayList<>();
+    public ArrayList observers = new ArrayList<>();
     Random rand = new Random();
 
     public Baby(String name) {
-        this.name = "Deep";
+        this.name = name;
     }
 
     public String getName() {
@@ -40,30 +40,30 @@ public class Baby {
     }
 
     public void registerObserver(Observer observer) {
-
+        observers.add(observer);
     }
 
     public void removeObserver(Observer observer) {
-        
+        observers.remove(observer);
     }
 
     public void notifyObservers(Cry cry) {
-        
+        observers.notify(cry);
     }
 
     public void angryCry() {
         System.out.println("Waaaaaaaaaaaa!" + name + " is feeling abandoned and angry.");
-        notifyObservers(cry);
+        notifyObservers(Cry.ANGRY);
     }
 
     public void hungryCry() {
         System.out.println("Neh Neh Neh! " + name + " is starving!!!!!");
-        notifyObservers(cry);
+        notifyObservers(Cry.HUNGRY);
     }
 
     public void wetCry() {
         System.out.println("Aaaaaaaaaaa! " + name + " is WET!");
-        notifyObservers(cry);
+        notifyObservers(Cry.WET);
     }
 
 }
