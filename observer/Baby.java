@@ -40,7 +40,7 @@ public class Baby {
     }
 
     public void registerObserver(Observer observer) {
-        
+
     }
 
     public void removeObserver(Observer observer) {
