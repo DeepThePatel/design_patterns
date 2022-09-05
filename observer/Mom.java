@@ -12,12 +12,12 @@ public class Mom{
     public static void update(Cry cry) {
         if(cry == Cry.ANGRY)
         {
-            System.out.println("Mom hugs " + ((Baby)baby).getName());;
+            System.out.println("Mom hugs " + ((Baby)baby).getName());
             ((Baby)baby).receiveLove();
         }
         else if(cry == Cry.HUNGRY)
         {
-            System.out.println("Mom feeds " + ((Baby)baby).getName());;
+            System.out.println("Mom feeds " + ((Baby)baby).getName());
             ((Baby)baby).eat();
         }
         else if(cry == Cry.WET)

@@ -1,8 +1,6 @@
 import java.util.ArrayList;
 import java.util.Random;
 
-import javax.swing.plaf.basic.BasicInternalFrameTitlePane.SystemMenuBar;
-
 /**
  * Creating a new instance of a baby
  */
@@ -40,7 +38,7 @@ public class Baby {
     }
 
     public void registerObserver(Observer observer) {
-        observers.add(observer);
+        observers.get(0);
     }
 
     public void removeObserver(Observer observer) {
@@ -48,9 +46,11 @@ public class Baby {
     }
 
     public void notifyObservers(Cry cry) {
-        observers.notify(cry);
+        observers.notify();
     }
-
+/**
+ * Methods that display the baby's current emotion and uses the notify observer method to act accordingly based on type of emotion
+ */
     public void angryCry() {
         System.out.println("Waaaaaaaaaaaa!" + name + " is feeling abandoned and angry.");
         notifyObservers(Cry.ANGRY);
