@@ -6,7 +6,7 @@ import java.util.Random;
  */
 public class Baby {
     protected String name;
-    public ArrayList<Observer> observers = new ArrayList<>();
+    private ArrayList<Observer> observers;
     Random rand = new Random();
 
     public Baby(String name) {

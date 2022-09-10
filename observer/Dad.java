@@ -3,8 +3,8 @@ import java.util.Random;
 public class Dad {
     protected Subject baby;
 
-    Dad(Subject baby) {
-        
+    Dad(Subject baby) implements Observer {
+
     }
     
 /**
