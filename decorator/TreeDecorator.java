@@ -17,10 +17,10 @@ abstract class TreeDecorator extends Tree{
      * @param decor Passing in the type of decor to conjoin with the tree
      */
     protected void integrateDecor(ArrayList<String> decor) {
-        for(int i=0;i<decor.size();i++) {
+         for(int i=0;i<decor.size();i++) {
             String temp = "";
             for(int j=0;j<decor.get(i).length();j++) {
-                if(decor.get(j).charAt(j) != ' ') {
+                if(decor.get(i).charAt(j) != ' ') {
                     temp += decor.get(i).charAt(j);
                 }
             }
