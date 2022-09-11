@@ -3,7 +3,9 @@ package decorator;
 public class Star extends TreeDecorator{
     private Tree tree;
 
-    Star(Tree tree) {
-        super(FileReader.getLines("decorator/txt/tree.txt"));
+    public Star(Tree tree) {
+        super(tree.lines);
+        this.tree = tree;
+        integrateDecor(FileReader.getLines("decorator/txt/star.txt"));
     }
 }

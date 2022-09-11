@@ -3,7 +3,9 @@ package decorator;
 public class Lights extends TreeDecorator{
     private Tree tree;
 
-    Lights(Tree tree) {
-        super(lines);
+    public Lights(Tree tree) {
+        super(tree.lines);   
+        this.tree = tree;
+        integrateDecor(FileReader.getLines("decorator/txt/lights.txt"));
     }
 }
