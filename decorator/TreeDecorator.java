@@ -23,6 +23,9 @@ abstract class TreeDecorator extends Tree{
                 if(decor.get(i).charAt(j) != ' ') {
                     temp += decor.get(i).charAt(j);
                 }
+                else {
+                    temp += lines.get(i).charAt(j);
+                }
             }
             lines.set(i, temp);
         }  
