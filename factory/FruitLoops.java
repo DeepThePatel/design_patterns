@@ -1,4 +1,4 @@
-package factory;
+//package factory;
 
 public class FruitLoops extends Cereal{
     
