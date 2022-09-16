@@ -6,6 +6,10 @@ public class FruitLoops extends Cereal{
         super(name,price);
         name = "Fruit Loops";
         price = 1.89;
+        toys.add("Paw Patrol stickers");
+        toys.add("Bat Man ring");
+        toys.add("Silly Putty");
+        toys.add("Tiny car");
     }
 
     public String prepare() {

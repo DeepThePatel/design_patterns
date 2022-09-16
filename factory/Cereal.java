@@ -1,6 +1,7 @@
 package factory;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 abstract class Cereal {
     protected String name;
@@ -20,10 +21,13 @@ abstract class Cereal {
     }
 
     public String boxCereal() {
+        Random random = new Random();
+        int randomNumber=random.nextInt(toys.size());
+
         System.out.println("Boxing the " + name);
         System.out.println("- Drawing fun pictures of " + name + " on the box");
         System.out.println("- Pouring the " + name + " into the box");
-        System.out.println("- Adding the surprise " + toys);
+        System.out.println("- Adding the surprise " + toys.get(randomNumber));
     }
 
     public String priceCereal() {
