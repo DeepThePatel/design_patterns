@@ -2,6 +2,11 @@ package factory;
 
 public class FruitLoops extends Cereal{
     
+    /**
+     * Setting the variables and adding toys to the array
+     * @param name Name of the cereal
+     * @param price Price of the cereal
+     */
     public FruitLoops(String name, double price) {
         super(name,price);
         name = "Fruit Loops";
@@ -12,6 +17,9 @@ public class FruitLoops extends Cereal{
         toys.add("Tiny car");
     }
 
+    /**
+     * Prepare text for Fruit Loops
+     */
     public String prepare() {
         System.out.println("- Gather the grain");
         System.out.println("- Shape into circles");
