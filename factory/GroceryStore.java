@@ -7,7 +7,12 @@ public class GroceryStore {
         Cereal cereal;
 
         if(type.equals("frosted flakes")) {
-
+            
         }
+
+        cereal.prepare();
+        cereal.boxCereal();
+        cereal.priceCereal();
     }
-    }
+}
+    
