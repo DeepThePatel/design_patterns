@@ -16,7 +16,7 @@ public class FrostedFlakes extends Cereal{
         toys.add("Snap bracelet");
         toys.add("Happy Feet figurine");
     }
-    
+
     /**
      * Prepare text for Frosted Flakes
      */
