@@ -9,6 +9,7 @@ public class GroceryStore {
      * @return Cereal text statements
      */
     public Cereal createCereal(String type) {
+
         Cereal cereal;
 
         if(type.equals("frosted flakes")) {
@@ -20,7 +21,10 @@ public class GroceryStore {
         else if(type.equals("lucky charms")) {
             cereal = new FrostedFlakes("Lucky Charms",1.55);
         }
-
+        else {
+            cereal = new FrostedFlakes("Frosted Flakes",2.99);
+        }
+        
         cereal.prepare();
         cereal.boxCereal();
         cereal.priceCereal();
