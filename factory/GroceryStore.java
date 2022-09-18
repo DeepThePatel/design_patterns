@@ -5,8 +5,8 @@ public class GroceryStore {
     
     /**
      * Creating the cereals 
-     * @param type 
-     * @return
+     * @param type Creating cereals
+     * @return Cereal text statements
      */
     public Cereal createCereal(String type) {
         Cereal cereal;
@@ -24,6 +24,8 @@ public class GroceryStore {
         cereal.prepare();
         cereal.boxCereal();
         cereal.priceCereal();
+
+        return cereal;
     }
 }
     
