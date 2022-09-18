@@ -21,8 +21,12 @@ public class FrostedFlakes extends Cereal{
      * Prepare text for Frosted Flakes
      */
     public String prepare() {
+        /*
         System.out.println("- Gather the grain");
         System.out.println("- Shape into flakes");
         System.out.println("- Sprinkle with frosting\n");
+        */
+
+        return "- Gather the grain\n- Shape into flakes\n- Sprinkle with frosting\n";
     }
 }

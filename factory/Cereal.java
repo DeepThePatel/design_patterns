@@ -17,10 +17,11 @@ abstract class Cereal {
         /**
          * Calling prepare methods for the cereals
          */
-        System.out.println("Preparing the " + name);
         FrostedFlakes ff = new FrostedFlakes(name, price);
         FruitLoops fl = new FruitLoops(name, price);
         LuckyCharms lc = new LuckyCharms(name, price);
+
+        return "Preparing the " + name;
     }
 
     public String boxCereal() {
@@ -33,10 +34,14 @@ abstract class Cereal {
         /**
          * Printing the boxCereal strings for the cereals
          */
+        /*
         System.out.println("Boxing the " + name);
         System.out.println("- Drawing fun pictures of " + name + " on the box");
         System.out.println("- Pouring the " + name + " into the box");
         System.out.println("- Adding the surprise " + toys.get(randomNumber));
+        */
+
+        return "Boxing the " + name + "\n- Drawing fun pictures of " + name + " on the box\n- Pouring the " + name + " into the box\n- Adding the surprise " + toys.get(randomNumber);
     }
 
     /**
@@ -44,6 +49,6 @@ abstract class Cereal {
      * @return String printing price and name of cereal associated with each cereal
      */
     public String priceCereal() {
-        System.out.println("Putting a price tag of $" + price + " on the " + name + " box");
+        return "Putting a price tag of $" + price + " on the " + name + " box";
     }
 }

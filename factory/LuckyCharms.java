@@ -21,9 +21,13 @@ public class LuckyCharms extends Cereal{
      * Prepare text for Lucky Charms
      */
     public String prepare() {
+        /*
         System.out.println("- Gather the grain");
         System.out.println("- Shape into Xs and Os");
         System.out.println("- Create marshmallow shapes");
         System.out.println("- Mix grain and marshmallows\n");
+        */
+
+        return "- Gather the grain\n- Shape into Xs and Os\n- Create marshmallow shapes\n- Mix grain and marshmallows\n";
     }
 }

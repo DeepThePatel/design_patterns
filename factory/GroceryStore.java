@@ -2,7 +2,12 @@ package factory;
 
 public class GroceryStore {
     public GroceryStore() { }
-        
+    
+    /**
+     * Creating the cereals 
+     * @param type 
+     * @return
+     */
     public Cereal createCereal(String type) {
         Cereal cereal;
 
