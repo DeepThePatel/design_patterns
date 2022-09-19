@@ -24,10 +24,6 @@ public class GroceryStore {
         else {
             cereal = new FrostedFlakes("Frosted Flakes",2.99);
         }
-        
-        cereal.prepare();
-        cereal.boxCereal();
-        cereal.priceCereal();
 
         return cereal;
     }
