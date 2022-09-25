@@ -11,7 +11,7 @@ public class Course {
     }
 
     public addAssignment(String title, String description, Topic topic) {
-
+            this.title = title;
     }
 
     public AssignmentIterator createIterator() {
