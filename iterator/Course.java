@@ -1,7 +1,5 @@
 package iterator;
 
-import org.w3c.dom.NameList;
-
 public class Course {
     private Assignment[] assignments;
     private int count;
@@ -29,7 +27,7 @@ public class Course {
      * Creates iterator
      */
     public AssignmentIterator createIterator() {
-       return assignments.iterator();
+       return new AssignmentIterator(assignments);
     }
 
     /*
