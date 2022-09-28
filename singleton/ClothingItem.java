@@ -5,7 +5,9 @@ public class ClothingItem {
     private ArrayList<Season> seasons;
 
     public ClothingItem(String name, ClothingPart part, String color) {
-
+        this.name = name;
+        this.part = part;
+        this.color = color;
     }
 
     public boolean hasSeason(Season season) {
@@ -17,6 +19,6 @@ public class ClothingItem {
     }
 
     public String toString(){
-        
+        return "A " + color + " " + part + " " + name;
     }
 }
