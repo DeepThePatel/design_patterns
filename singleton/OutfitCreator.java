@@ -13,7 +13,8 @@ public class OutfitCreator {
     }
 
     public static OutfitCreator getInstance() {
-
+        OutfitCreator outfitCreator = OutfitCreator.getInstance();
+        return outfitCreator;
     }
 
     public String getOutfit(Season season) {
