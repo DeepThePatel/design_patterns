@@ -1,3 +1,4 @@
+import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -9,7 +10,7 @@ public class OutfitCreator {
     private static OutfitCreator outfitCreator;
 
     private OutfitCreator() {
-    
+        FileReader
     }
 
     public static OutfitCreator getInstance() {

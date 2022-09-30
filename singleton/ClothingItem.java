@@ -14,7 +14,7 @@ public class ClothingItem {
 
     //WORK ON
     public boolean hasSeason(Season season) {
-            if(seasons != null) {
+            if(this.name && this.part) {
                 return true;
             }
             else {
