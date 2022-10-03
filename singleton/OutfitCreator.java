@@ -1,3 +1,5 @@
+package singleton;
+
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Random;
