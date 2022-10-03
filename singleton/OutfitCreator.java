@@ -13,15 +13,24 @@ public class OutfitCreator {
     Random rand = new Random();
     private static OutfitCreator outfitCreator;
 
+    /*
+     * Getting clothing from file and adding to array
+     */
     private OutfitCreator() {
         FileReader.getClothing();
     }
 
+    /*
+     * Getting instance of clothing
+     */
     public static OutfitCreator getInstance() {
         OutfitCreator outfitCreator = OutfitCreator.getInstance();
         return outfitCreator;
     }
 
+    /*
+     * Getting outfit from text files
+     */
     public String getOutfit(Season season) {
         bottoms = FileReader.getClothing("bottoms.txt",ClothingPart.BOTTOM);
         tops = FileReader.getClothing("tops.txt", ClothingPart.TOP);

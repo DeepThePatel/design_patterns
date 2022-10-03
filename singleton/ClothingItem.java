@@ -8,13 +8,18 @@ public class ClothingItem {
     private String color;
     private ArrayList<Season> seasons;
 
+    /*
+     * Setting clothing part values
+     */
     public ClothingItem(String name, ClothingPart part, String color) {
         this.name = name;
         this.part = part;
         this.color = color;
     }
 
-    //WORK ON
+    /*
+     * Check if season is in the array
+     */
     public boolean hasSeason(Season season) {
             if(seasons.contains(season)) {
                 return true;
@@ -24,6 +29,9 @@ public class ClothingItem {
             }
     }
 
+    /*
+     * Adding seasons
+     */
     public void addSeason(Season season) {
         seasons.add(Season.FALL);
         seasons.add(Season.SPRING);
@@ -31,6 +39,9 @@ public class ClothingItem {
         seasons.add(Season.WINTER);
     }
 
+    /*
+     * Output string
+     */
     public String toString(){
         return "A " + color + " " + part + " " + name;
     }
