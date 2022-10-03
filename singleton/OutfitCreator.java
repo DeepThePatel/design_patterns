@@ -17,7 +17,9 @@ public class OutfitCreator {
      * Getting clothing from file and adding to array
      */
     private OutfitCreator() {
-        FileReader.getClothing();
+        bottoms = FileReader.getClothing("bottoms.txt",ClothingPart.BOTTOM);
+        tops = FileReader.getClothing("tops.txt", ClothingPart.TOP);
+        wholes = FileReader.getClothing("wholes.txt",ClothingPart.WHOLE);
     }
 
     /*
@@ -32,8 +34,6 @@ public class OutfitCreator {
      * Getting outfit from text files
      */
     public String getOutfit(Season season) {
-        bottoms = FileReader.getClothing("bottoms.txt",ClothingPart.BOTTOM);
-        tops = FileReader.getClothing("tops.txt", ClothingPart.TOP);
-        wholes = FileReader.getClothing("wholes.txt",ClothingPart.WHOLE);
+        return getOutfit(season);
     }
 }
