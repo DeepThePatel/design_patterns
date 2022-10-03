@@ -34,6 +34,6 @@ public class OutfitCreator {
      * Getting outfit from text files
      */
     public String getOutfit(Season season) {
-        return getOutfit(season);
+        return getOutfit(outfitCreator);
     }
 }
