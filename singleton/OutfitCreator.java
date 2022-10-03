@@ -4,6 +4,8 @@ import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Random;
 
+import singleton.ClothingPart;
+
 public class OutfitCreator {
     private ArrayList<ClothingItem> tops;
     private ArrayList<ClothingItem> bottoms;
@@ -12,7 +14,7 @@ public class OutfitCreator {
     private static OutfitCreator outfitCreator;
 
     private OutfitCreator() {
-        FileReader
+        FileReader.getClothing();
     }
 
     public static OutfitCreator getInstance() {
@@ -21,6 +23,8 @@ public class OutfitCreator {
     }
 
     public String getOutfit(Season season) {
-
+        bottoms = FileReader.getClothing("bottoms.txt",ClothingPart.BOTTOM);
+        tops = FileReader.getClothing("tops.txt", ClothingPart.TOP);
+        wholes = FileReader.getClothing("wholes.txt",ClothingPart.WHOLE);
     }
 }
