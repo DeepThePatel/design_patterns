@@ -21,7 +21,7 @@ public class Assignment {
         if(topic != "ALL" || "PROJECT" || "DESIGN_PATTERN" || "GIT") {
             return false;
         }
-        return true;
+        return this.topic = topic;
     }
 
     /*
