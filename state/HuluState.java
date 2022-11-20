@@ -32,6 +32,7 @@ public class HuluState implements State{
         for(int i=0;i<movies.length;i++) {
             System.out.println("- " + movies[i] + "\n");
         }
+        return 0;
     }
 
     @Override
@@ -39,6 +40,6 @@ public class HuluState implements State{
         for(int i=0;i<tvShows.length;i++) {
             System.out.println("- " + tvShows[i] + "\n");
         }
-        return null;
+        return 0;
     }
 }

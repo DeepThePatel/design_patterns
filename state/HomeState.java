@@ -27,11 +27,12 @@ public class HomeState implements State{
     @Override
     public String pressMovieButton() {
         System.out.println("Home: You must pick an app to show movies.");
+        return 0;
     }
 
     @Override
     public String pressTVButton() {
         System.out.println("Home: You must pick an app to show TV shows.");
-        return null;
+        return 0;
     }
 }
