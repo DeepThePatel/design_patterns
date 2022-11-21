@@ -1,3 +1,5 @@
+package state;
+
 public class HomeState implements State{
     private TV tv;
 
@@ -14,25 +16,23 @@ public class HomeState implements State{
     public String pressNetflixButton() {
         System.out.println("Loading Netflix...");
         tv.setState(tv.getNetflixState());
-        return tv;
+        return "Welcome to Netflix";
     }
 
     @Override
     public String pressHuluButton() {
         System.out.println("Loading Hulu...");
         tv.setState(tv.getHuluState());
-        return tv;
+        return "Welcome to Hulu";
     }
 
     @Override
     public String pressMovieButton() {
-        System.out.println("Home: You must pick an app to show movies.");
-        return 0;
+        return "Home: You must pick an app to show movies.";
     }
 
     @Override
     public String pressTVButton() {
-        System.out.println("Home: You must pick an app to show TV shows.");
-        return 0;
+        return "Home: You must pick an app to show TV shows.";
     }
 }

@@ -6,7 +6,7 @@ public class HuluState implements State{
     private String[] tvShows = new String[] {"Sesame Street" , "Care Bears", "Looney Tunes"};
 
 
-    public HomeState(TV tv) {
+    public HuluState(TV tv) {
         this.tv = tv;
     }
 
@@ -14,14 +14,14 @@ public class HuluState implements State{
     public String pressHomeButton() {
         System.out.println("Loading Home...");
         tv.setState(tv.getHomeState());
-        return tv;
+        return "Welcome to Home";
     }
 
     @Override
     public String pressNetflixButton() {
         System.out.println("Loading Netflix...");
         tv.setState(tv.getNetflixState());
-        return tv;
+        return "Welcome to Netflix";
     }
 
     @Override
@@ -35,7 +35,7 @@ public class HuluState implements State{
         for(int i=0;i<movies.length;i++) {
             System.out.println("- " + movies[i] + "\n");
         }
-        return 0;
+        return "Movies";
     }
 
     @Override
@@ -44,6 +44,6 @@ public class HuluState implements State{
         for(int i=0;i<tvShows.length;i++) {
             System.out.println("- " + tvShows[i] + "\n");
         }
-        return 0;
+        return "TV Shows";
     }
 }

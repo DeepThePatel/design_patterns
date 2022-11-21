@@ -1,14 +1,16 @@
+package state;
+
 public class TV {
-    private State HomeState;
-    private State NetflixState;
-    private State HuluState;
+    private State homeState;
+    private State netflixState;
+    private State huluState;
     private State state;
 
     public TV() {
         homeState = new HomeState(this);
         netflixState = new NetflixState(this);
         huluState = new HuluState(this);
-        stateState = new State(this);
+        state = homeState;
     }
 
     public String pressHomeButton() {
@@ -31,7 +33,7 @@ public class TV {
         return state.pressTVButton();
     }
 
-    public setState(State state) {
+    public void setState(State state) {
         this.state = state;
     }
 
