@@ -12,14 +12,14 @@ public class HomeState implements State{
 
     @Override
     public String pressNetflixButton() {
-        System.out.println("Going to Netflix");
+        System.out.println("Loading Netflix...");
         tv.setState(tv.getNetflixState());
         return tv;
     }
 
     @Override
     public String pressHuluButton() {
-        System.out.println("Going to Hulu");
+        System.out.println("Loading Hulu...");
         tv.setState(tv.getHuluState());
         return tv;
     }

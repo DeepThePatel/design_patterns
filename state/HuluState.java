@@ -1,3 +1,5 @@
+package state;
+
 public class HuluState implements State{
     private TV tv;
     private String[] movies = new String[] {"Cars", "Cinderella" , "Wall-E" , "ET"};
@@ -10,14 +12,14 @@ public class HuluState implements State{
 
     @Override
     public String pressHomeButton() {
-        System.out.println("Going to Home");
+        System.out.println("Loading Home...");
         tv.setState(tv.getHomeState());
         return tv;
     }
 
     @Override
     public String pressNetflixButton() {
-        System.out.println("Going to Netflix");
+        System.out.println("Loading Netflix...");
         tv.setState(tv.getNetflixState());
         return tv;
     }
@@ -29,6 +31,7 @@ public class HuluState implements State{
 
     @Override
     public String pressMovieButton() {
+        System.out.println("Hulu Movies:");
         for(int i=0;i<movies.length;i++) {
             System.out.println("- " + movies[i] + "\n");
         }
@@ -37,6 +40,7 @@ public class HuluState implements State{
 
     @Override
     public String pressTVButton() {
+        System.out.println("Hulu TV Shows:");
         for(int i=0;i<tvShows.length;i++) {
             System.out.println("- " + tvShows[i] + "\n");
         }
