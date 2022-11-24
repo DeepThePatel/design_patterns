@@ -11,35 +11,36 @@ public class Cassett implements AnalogAlbum {
 
     public String play() {
         for(int currentIndex=0;currentIndex<songs.size(); currentIndex++) {
-            System.out.println("Playing song " + currentIndex + ": " + songs.get(currentIndex));
-            if(currentIndex==songs.size()) {
-                System.out.println("At thte end of the Cassette you need to rewind");
+            if(currentIndex==songs.size()-1) {
+                return "At the end of the Cassette you need to rewind";
             }
+            return "Playing song " + currentIndex + ": " + songs.get(currentIndex);
         }
+        return null;
     }
 
     public String rewind() {
         if(currentIndex==0) {
-            System.out.println("Fully re-wound");
+            return "Fully re-wound";
         }
         else {
             currentIndex--;
-            System.out.println("Rewinding to song " + currentIndex);
+            return "Rewinding to song " + currentIndex;
         }
     }
     
     public String ffwd() {
         for(currentIndex=0;currentIndex<songs.size();currentIndex++) {
-        }
-        if(currentIndex>songs.size()) {
-            System.out.println("At the end of the cassette you need to rewind");
-        }   
-            System.out.println("Forward to song " + currentIndex);
-            currentIndex++;
             if(currentIndex==songs.size()) {
-                System.out.println("Forwarded to the end of the cassette");
+                return "At the end of the cassette you need to rewind";
+            }
+            currentIndex++;   
+            System.out.println("Forward to song " + currentIndex);
+            if(currentIndex==songs.size()) {
+                return "Forwarded to the end of the cassette";
             }
         }
+        return null;
     }
 
     public String pause() {
