@@ -10,23 +10,30 @@ public class CD implements DigitalAlbum {
     }
 
     public String playFromBeginning() {
-
+        return "Playing song 1 " + songs.get(0);
     }
 
     public String playSong(int num) {
-
+        if(num>=0 || num<=songs.size()) {
+            return "Playing " + songs.get(num);
+        }
+        else {
+            return "Not a valid song number";
+        }
     }
 
     public String prevSong() {
-
+        if(currentIndex==0) {
+            return "Already at beginning";
+        }
+        else {
+            currentIndex--;
+            return "Skipping back and playing " + songs.get(currentIndex);
+        }
     }
 
     public String nextSong() {
-
-    }
-
-    public String nextSong() {
-
+        return "Playing " + currentIndex + ": " + songs.get(currentIndex);
     }
 
     public String stop() {
