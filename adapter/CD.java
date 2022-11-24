@@ -28,12 +28,17 @@ public class CD implements DigitalAlbum {
         }
         else {
             currentIndex--;
-            return "Skipping back and playing " + songs.get(currentIndex);
+            return "Skipping back and playing: " + songs.get(currentIndex);
         }
     }
 
     public String nextSong() {
-        return "Playing " + currentIndex + ": " + songs.get(currentIndex);
+        if(currentIndex==songs.size()) {
+            return playFromBeginning();
+        }
+        String nextSong = "Playing " + currentIndex + ": " + songs.get(currentIndex);
+        currentIndex++;
+        return nextSong;
     }
 
     public String stop() {

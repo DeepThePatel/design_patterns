@@ -8,22 +8,22 @@ public class AnalogAdapter implements AnalogAlbum {
     }
 
     public String play() {
-        album.playSong(0);
+        return album.nextSong();
     }
 
     public String rewind() {
-        album.prevSong();
+        return album.prevSong();
     }
     
     public String ffwd() {
-        album.nextSong();
+        return album.nextSong();
     }
 
     public String pause() {
-        album.pause();
+        return album.pause();
     }
 
     public String stopEject() {
-        album.stop();
+        return album.stop();
     }
 }
