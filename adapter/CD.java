@@ -6,7 +6,7 @@ public class CD implements DigitalAlbum {
     private int currentIndex;
 
     public CD(ArrayList<String> songs) {
-
+        this.songs = songs;
     }
 
     public String playFromBeginning() {
@@ -30,10 +30,10 @@ public class CD implements DigitalAlbum {
     }
 
     public String stop() {
-
+        return "Stopping";
     }
 
     public String pause() {
-        
+        return "Pausing";
     }
 }
