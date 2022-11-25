@@ -36,7 +36,7 @@ public class CD implements DigitalAlbum {
         if(currentIndex==songs.size()) {
             return playFromBeginning();
         }
-        String nextSong = "Playing " + currentIndex + ": " + songs.get(currentIndex);
+        String nextSong = "Playing " + (currentIndex+1) + ": " + songs.get(currentIndex);
         currentIndex++;
         return nextSong;
     }
