@@ -7,16 +7,16 @@ public class Cassett implements AnalogAlbum {
 
     public Cassett(ArrayList<String> songs) {
         this.songs = songs;
+        currentIndex = 0;
     }
 
     public String play() {
-        for(currentIndex=0; currentIndex<songs.size(); currentIndex++) {
-            if(currentIndex==songs.size()-1) {
+            if(currentIndex==songs.size()) {
                 return "At the end of the Cassette you need to rewind";
             }
-            return "Playing song " + currentIndex + ": " + songs.get(currentIndex);
-        }
-        //return play();
+            System.out.println("Playing song " + currentIndex + ": " + songs.get(currentIndex));
+            currentIndex++;
+            return "";
     }
 
     public String rewind() {
@@ -30,17 +30,16 @@ public class Cassett implements AnalogAlbum {
     }
     
     public String ffwd() {
-        for(currentIndex=0;currentIndex<songs.size();currentIndex++) {
             if(currentIndex==songs.size()) {
                 return "At the end of the cassette you need to rewind";
+            }           
+            else if(currentIndex==songs.size()-1) {
+                return "Forward to song " + currentIndex + "\nForwarded to the end of the cassette";
             }
-            currentIndex++;               
-            if(currentIndex==songs.size()) {
-                return "Forwarded to the end of the cassette";
+            else {
+                currentIndex++;
+                return "Forward to song " + currentIndex;
             }
-            return "Forward to song " + currentIndex;
-        }
-        //return ffwd();
     }
 
     public String pause() {
